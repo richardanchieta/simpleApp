@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Simple App</title>
+		
+	</head>
+	
+	<body onload="quandoDomEstiverCarregado()">
+	
+	
+	
+	<script src="cordova.js"></script>
+	<script>
+	
+		function quandoDomEstiverCarregado(){
+			document.addEventListener("deviceready", function (){
+				navigator.notification.alert('Dispositivo pronto!', executarDepoisDaMensagem, 'Primeiro alerta', 'Vai!');
+				
+				
+			}, false);
+		}
+		
+		
+		function executarDepoisDaMensagem(){
+		
+			alert('Alert JS depois da mensagem NATIVA');
+		}
+		
+	</script>
+	</body>
+	
+	
+</html>
